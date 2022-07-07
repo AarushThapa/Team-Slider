@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #222528;
+}
+
+.teams{
+    padding: 3rem;
+}
+.swiper-slide{
+    border-radius: 10px !important;
+    background-color: #36393e !important;
+}
+
+
+.cards {
+    overflow: hidden;
+    background-color: #36393e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 32rem;
+    padding: 1rem;
+    position: relative;
+    transition: ease-in-out 0.2s;
+    border-radius: 10px;
+}
+
+.cards:hover{
+    transform: scale(1.02);
+}
+
+.cards .img-div img {
+    width: 10rem;
+    height: 10.5rem;
+    border-radius: 50%;
+    margin: 1rem 0rem;
+}
+
+.cards .details {
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.details .name{
+    font-size: 1.4rem;
+    letter-spacing: 1.5px;
+    font-family: "Bebas Neue", sans-serif;
+    padding-bottom: 0.4rem;
+    padding-top: 0.5rem;
+    font-weight: 600;
+}
+
+.details .profession{
+    font-weight: 500;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.details .profession::after{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 30%;
+    background-color: rgba(122, 122, 122, 0.8);
+    top: 30%;
+    right: 10%;
+}
+
+.details .profession::before{
+    content: " ";
+    position: absolute;
+    height: 2px;
+    width: 30%;
+    background-color: rgba(122, 122, 122, 0.8);
+    top: 30%;
+    left: 10%;
+}
+
+.details .info{
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: hsla(0,0%,100%,.8);
+    letter-spacing: 1.2;
+    line-height: 20px
+}
+
+.cards .logos{
+    position: absolute;
+    bottom: 4%;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logos img{
+    width: 2rem;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.logos img:hover{
+    transform: scale(1.02);
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  /* Navigation Buttons Custom */
+  
+  :root {
+    /* --swiper-navigation-color: #ffffff; */
+    opacity: 1 !important;
+    --swiper-navigation-size: 2rem !important;
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+    background-color: #222528;
+    border-radius: 50%;
+    padding: 1rem;
+    font-weight: 900;
+} */
+
+/* End */
+
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    height: 0rem;
+}
+
+span.swiper-pagination-bullet {
+    height: 0rem;
+}
+
+.swiper-button-prev {
+    left: 0px !important; 
+    right: auto;
+}
+.swiper-button-next {
+    right: 0px !important; 
+    left: auto;
+}
+
+
+/* Cursor */
+.cursor {
+    z-index: 100;
+    position: absolute;
+    pointer-events: none;
+  }
+  .cursor img{
+    width: 3rem;
+    height: 3rem;
+    opacity: 1;
+    z-index: 900;
+    transform: translate(-50%, -50%);
+  }
+
+  .cursor.click::before {
+    animation: click 1s ease forwards;
+    background-color: rgb(255, 255, 255);
+  }
+  @keyframes click {
+    0% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(7);
+    }
+  }
+
